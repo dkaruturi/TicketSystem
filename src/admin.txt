@@ -1,0 +1,8 @@
+Kane#testingemail354+Kane@gmail.com#Kane354#Kane#admin
+Barabara#testingemail354+Barabara@gmail.com#Barabara354#Barabara#admin
+Cagney#testingemail354+Cagney@gmail.com#Cagney354#Cagney#admin
+Lucy#testingemail354+Lucy@gmail.com#Lucy354#Lucy#admin
+Virus#testingemail354+Virus@gmail.com#Virus354#Virus#admin
+Fake1#testingemail354+Fake1@gmail.com#Fake1354#Fake1#regular
+Fake2#testingemail354+Fake2@gmail.com#Fake2354#Fake2#regular
+Fake3#testingemail354+Fake3@gmail.com#Fake3354#Fake3#regular
