@@ -28,9 +28,11 @@ In addition, there is a change password and logout button
 
 ## Code Documentation
 Start: index.html
+
 automatically redirects the user to the initialization script
 
 Initialization: initME.PHP
+
 Supporting files: admin.txt, ticket.txt
 initMe sets up the tickets database and initializes two tables, admin and tickets
 These tables will be filled with dummy data from the txt files
@@ -56,11 +58,15 @@ handle the ajax requests made by this file.
 To test this application, the following dummy users can be used. Please note that the following application was tested on XAMPP.
 
 Admin:
+
 username: Kane354
+
 password: Kane
 
 Testing Email Account:
+
 username: testingemail354@gmail.com
+
 password: TicketingSystem
 
 To test this application, the following values may need to be set:
@@ -69,8 +75,11 @@ In forget.php, line 21, assure that the correct location to resetPassword.php is
 $url = "http://localhost/TicketingSystem/src/resetPassword.php/?id="."$id";
 
 In messages.php, the Twilio account information must be set.
+
 Line 4: "AccountSid" must be set
+
 Line 5: "AuthToken" must be set
+
 Line 7: "from" phone number must be set
 
 Note: All of the Ajax requests in both user pages are done through processUser.php
