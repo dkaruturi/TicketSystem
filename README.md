@@ -1,7 +1,7 @@
 # Ticket System for Tech Support
 This application supports all the basic functionality for administrators to manage their issues and for customers to place issues. It utilizes the twilio text messaging api on the admin side.  
 
-#Login page
+##Login page
 Both the Admins and Customers can log in to their respective accounts from here. There is a register user option, which can only be used to add new customer accounts. There is also a forgot password option that will send an email to an address on file to reset the password.
 
 
@@ -27,10 +27,12 @@ View My Tickets: Shows all tickets associated with the customer <br />
 In addition, there is a change password and logout button
 
 ## Code Documentation
-Start: index.html <br />
+####Start:
+index.html <br />
 automatically redirects the user to the initialization script
 
-Initialization: initME.PHP <br />
+####Initialization:
+initME.PHP <br />
 Supporting files: admin.txt, ticket.txt <br />
 initMe sets up the tickets database and initializes two tables, admin and tickets. <br />
 These tables will be filled with dummy data from the txt files
@@ -40,15 +42,18 @@ format: ticketID#name#emailAddress#subject#adminName#body#status#adminID#phoneNu
 admin.txt <br />
 format: password#emailAddress#username#name#userType
 
-Login Page: admin.php
+####Login Page:
+admin.php <br />
 Supporting files: forget.php, register.php, processUser.php
 This file handles the login for both types of users. Upon successful login, it redirects to either the the admin page or the customer page.
 
-Admin Page: admin_user.php
+####Admin Page:
+admin_user.php <br />
 Supporting files: processUser.php, selectedFunctions.php, message.php, changePassword.php
 This file handles all of the functionality for the admin user. The supporting files handle the ajax requests made by this file.
 
-Customer Page: regular_user.php
+####Customer Page:
+regular_user.php <br />
 Supporting files: processUser.php, changePassword.php, ticket.php
 This file handles all of the functionality for the regular user. The supporting files
 handle the ajax requests made by this file.
