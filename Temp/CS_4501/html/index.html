@@ -1,0 +1,105 @@
+<html>
+<h1>Please click to see your quiz:</h1>
+
+<script type="text/javascript">
+    function makeRequest() {
+        var httpRequest;
+
+        if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+            httpRequest = new XMLHttpRequest();
+            if (httpRequest.overrideMimeType) {
+                httpRequest.overrideMimeType('text/xml');
+                // See note below about this line
+            }
+        }
+        else if (window.ActiveXObject) { // IE
+            try {
+                httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                           try {
+                                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                               }
+                             catch (e) {}
+                          }
+                                       }
+
+        if (!httpRequest) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+            return false;
+        }
+        httpRequest.onreadystatechange = function() { alertContents(httpRequest); };
+        httpRequest.open('POST', 'process.php', true);
+        httpRequest.send(null);
+//       return httpRequest.responseText;
+    }
+
+    function alertContents(httpRequest) {
+
+        if (httpRequest.readyState == 4) {
+            if (httpRequest.status == 200) {
+//                document.getElementById("data").innerHTML = httpRequest.responseText;
+                var div = document.getElementById("data")
+                var xmlDoc = httpRequest.responseXML.documentElement;
+                var questions = new Array();
+                var answers = new Array();
+                var p = xmlDoc.getElementsByTagName("problem");
+                //console.log(p);
+                for ( i=0 ; i<p.length ; i++) {
+                    var x = document.createElement("SELECT");
+                    x.setAttribute("id", i+"");
+                   // document.appendChild(p[i].getElementsByTagName("question")[0].childNodes);
+                    //console.log(p[i].getElementsByTagName("question")[0].childNodes);
+                    var thing= p[i].getElementsByTagName("question")[0].childNodes[0].nodeValue;
+                    document.body.appendChild(document.createTextNode(p[i].getElementsByTagName("question")[0].childNodes[0].nodeValue));
+                   // div.appendChild(thing);
+                   // div.appendChild(x);
+//                    document.appendChild("" + thing);
+                    document.body.appendChild(x);
+                    //console.log(p[i].getElementsByTagName("question")[0].childNodes);
+                    var a = p[i].getElementsByTagName("answer");
+                    var temp = new Array();
+                    for ( j=0 ; j<a.length ; j++){
+                            var temp = a[j].childNodes[0].nodeValue;
+                            var z = document.createElement("option");
+                            var t = document.createTextNode(temp);
+                            z.appendChild(t);
+                            document.getElementById(i+"").appendChild(z);
+                    //console.log()
+                    }
+                    document.body.appendChild(document.createElement('br'));
+                    // var newLineNode = document.createTextNode("<br>");
+                    // document.body.appendChild(newLineNode);
+                    //var t = document.createTextNode("<br>");
+                    //div.appendChild(t);
+                    //div.appendChild(document.createTextNode("\\"));
+                    //answers.push(temp);
+                }
+                //document.getElementById("data").innerHTML = questions;
+                //document.getElementById("data").appendChild(div);
+
+
+            } else {
+                alert('There was a problem with the request.');
+            }
+        }
+
+    }
+
+    function toggle() {
+        var e = document.getElementById("data");
+        if (e.innerHTML=='')
+        {
+              makeRequest();
+              e.style.visibility = 'visible';
+
+        }
+    }
+</script>
+
+<body>
+    <button id="enter" type="submit" onclick="toggle()">Enter</button>
+
+    <div id="data"></div>
+</body>
+</html>

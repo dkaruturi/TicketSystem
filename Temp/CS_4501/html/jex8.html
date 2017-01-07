@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eighth JavaScript Example (MUSIC POLL)</title>
+
+<script type = "text/javascript">
+
+function checkData()
+{
+           var val = document.pollForm.choice.value;
+if(val.length==6){
+  var check = /([C][S][1-4][0-7]{3})/i.test(val);
+  if (check) {
+                 alert("VALID");
+             }
+             else {
+                 alert("INVALID");
+             }
+
+
+}else{
+  alert("INVALID");
+}
+
+         };
+// //            if (bool) {
+// //                alert("VALID");
+// //            } else {
+// //                alert("INVALID");
+// //            }
+//            return true;
+//      }
+// }
+
+</script>
+
+</head>
+<body>
+<script type = "text/javascript">
+
+</script>
+<p></p>
+    <form name = "pollForm" onsubmit = "checkData()" method="POST" action="jex8.html">
+
+            <input type = "text" name = "choice" value = "">
+            <p></p>
+            <input type = "submit" name = "Submit">
+            <p></p>
+
+    </form>
+
+<script type = "text/javascript">
+     document.pollForm.choice.focus();
+     document.pollForm.onsubmit = checkData;
+</script>
+</body>
+</html>

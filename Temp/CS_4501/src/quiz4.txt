@@ -1,0 +1,4 @@
+What is Divya's favorite color?#blue:green:red:orange:purple#0
+What is Divya's DnD character?#halfling:elf:human:half orc:gnome#3
+What is Divya's favorite food?#potatoes:tomato:nuts:spinach:chicken#4
+What is Divya's favorite jean style?#ripped:light wash:dark wash:flare:rainbow#2

@@ -170,7 +170,7 @@ function makeRequest(str) {
 
     function viewMyTickets() {
       var viewticket = $("#viewticket");
-     if(viewticket.html()=='' && $("#createticket").html()==""){
+     if(viewticket.html()==''){
        makeRequest("viewticket");
      }
        hideButtons('viewticket');
@@ -231,8 +231,7 @@ function makeRequest(str) {
 
     function submit_new_ticket(){
       $("#createticket").toggle();
-      if($("#createticket").html()==''&&$("#viewticket").html()==''){
-        makeRequest("viewticket");
+      if($("#createticket").html()==''){
         createForm();
       }
        hideButtons('createticket');

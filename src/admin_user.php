@@ -96,8 +96,7 @@ function alertContents(httpRequest,str) {
             else if(httpRequest.responseText=='added'){
               info[selectedTicket][5]=admin_name;
             }
-
-
+            selectTicket(selectedTicket);
           }
 
             console.log(httpRequest.responseText);
@@ -257,7 +256,7 @@ $("#vat").hide();
           var tr = document.createElement('tr');
           tr.setAttribute("id","specialtr");
           console.log(row_array);
-            for (var j = 0; j < row_array.length; j++) {
+            for (var j = 0; j < row_array.length-1; j++) {
               var td = document.createElement('td');
               console.log(td);
               td.appendChild(document.createTextNode(row_array[j]));
@@ -292,8 +291,15 @@ function selectTicket(index){
 
 
     for(i=0; i<temp_info.length; i++) {
+      if(i!=7){
       selected.append(document.createTextNode(temp_array[i]+": "+temp_info[i]));
       selected.append('<br/>');
+      }
+      else{
+        selected.append(document.createTextNode(temp_array[i]+": "+temp_info[i+1]));
+        selected.append('<br/>');
+        i++;
+      }
     }
 
     $("#selectpage").show();
@@ -406,7 +412,6 @@ function toggle(){
 function assignself(){
   ticketID=info[selectedTicket][0];
   makeRequest('assignself');
-  selectTicket(selectedTicket);
 
 }
 

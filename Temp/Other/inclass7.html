@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<div id="123"></div>
+<!--
+<form action = "start.php"
+    method = "POST">
+
+</form>  -->
+<button type="button" onclick="myFunction()"> Click Me</button>
+
+
+<script>
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    changeHTML(xhttp);
+  };
+  xhttp.open("GET", "file1.txt", true);
+  xhttp.send();
+}
+
+function changeHTML(httpRequest) {
+  if (httpRequest.readyState == 4) {
+    if (httpRequest.status == 200) {
+         document.getElementById("123").innerHTML = httpRequest.responseText;
+    }
+  }
+
+}
+
+
+function myFunction(){
+
+var x = document.getElementById('123');
+if(x.innerHTML==""){
+  loadDoc();
+
+} else {
+  if(x.style.visibility=='hidden'){
+    x.style.visibility='visible';
+  }
+  else{
+    x.style.visibility='hidden';
+  }
+
+}
+}
+
+//}
+
+
+</script>
+
+
+<!-- <form action = "start.php"
+    method = "POST">
+<br />
+<input type = "submit" name = "submit_info" value = "Submit">
+</form> -->
+
+
+
+
+
+</html>

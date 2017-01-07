@@ -1,0 +1,11 @@
+election
+Trump
+Clinton
+Senate
+House
+ElectoralCollage
+poll
+vote
+270
+Democrats
+Republications

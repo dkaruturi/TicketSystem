@@ -6,7 +6,7 @@ Both the Admins and Customers can log in to their respective accounts from here.
 
 
 ## Admin Functionality
-On the admin page, tickets can be viewed in a table by hitting one of three buttons (View All Tickets, View My Tickets, and View Unassigned). The resulting table can be sorted by Ticket #, Received, Sender Name, Sender Email, Subject, Tech, and Status. There is also an option to change passwords and logout.
+On the admin page, tickets can be viewed in a table by hitting one of three buttons (View All Tickets, View My Tickets, and View Unassigned). The resulting table can be sorted by Ticket #, Time Received, Sender Name, Sender Email, Subject, Assigned Admin, and Status. There is also an option to change passwords and logout.
 
 Specifics of the an individual ticket can be viewed by clicking on it. This will reveal the body of the ticket, along with 8 options: Toggle Status, Toggle Assignment, Email Sender, Delete Ticket, Ticket from Sender, Find Similar Tickets, Message Sender, Go Back to Admin.
 
@@ -64,6 +64,10 @@ To test this application, the following dummy users can be used. Please note tha
 Admin: <br />
 username: Kane354 <br />
 password: Kane
+
+Customer: <br />
+username: Fake1354 <br />
+password: Fake1
 
 Testing Email Account: <br />
 username: testingemail354@gmail.com <br />
