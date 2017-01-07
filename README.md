@@ -32,7 +32,7 @@ index.html <br />
 automatically redirects the user to the initialization script
 
 ####Initialization:
-initME.PHP <br />
+Main File: initME.PHP <br />
 Supporting files: admin.txt, ticket.txt <br />
 initMe sets up the tickets database and initializes two tables, admin and tickets. <br />
 These tables will be filled with dummy data from the txt files
@@ -43,17 +43,17 @@ admin.txt <br />
 format: password#emailAddress#username#name#userType
 
 ####Login Page:
-admin.php <br />
+Main File: admin.php <br />
 Supporting files: forget.php, register.php, processUser.php
 This file handles the login for both types of users. Upon successful login, it redirects to either the the admin page or the customer page.
 
 ####Admin Page:
-admin_user.php <br />
+Main File: admin_user.php <br />
 Supporting files: processUser.php, selectedFunctions.php, message.php, changePassword.php
 This file handles all of the functionality for the admin user. The supporting files handle the ajax requests made by this file.
 
 ####Customer Page:
-regular_user.php <br />
+Main File: regular_user.php <br />
 Supporting files: processUser.php, changePassword.php, ticket.php
 This file handles all of the functionality for the regular user. The supporting files
 handle the ajax requests made by this file.
