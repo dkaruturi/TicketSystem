@@ -88,9 +88,9 @@ Note: All of the Ajax requests in both user pages are done through processUser.p
 ## Example Images
 <p align="center">
   <img src="img/login.png"/>
-  <img src="img/adminpage.png" width="350"/>
-  <img src="img/adminFunctions.png" width="350"/>
-  <img src="img/regularpage.png" width="350"/>
+  <img src="img/adminpage.png"/>
+  <img src="img/adminFunctions.png"/>
+  <img src="img/regularpage.png"/>
 </p>
 
 
