@@ -87,9 +87,13 @@ Note: All of the Ajax requests in both user pages are done through processUser.p
 
 ## Example Images
 <p align="center">
+###General Homepage
   <img src="img/login.png"/>
+###Admin Homepage
   <img src="img/adminpage.png"/>
+###Admin Ticket View and Functions
   <img src="img/adminFunctions.png"/>
+####Customer Homepage
   <img src="img/regularpage.png"/>
 </p>
 
