@@ -84,3 +84,13 @@ Line 5: "AuthToken" must be set <br />
 Line 7: "from" phone number must be set <br />
 
 Note: All of the Ajax requests in both user pages are done through processUser.php
+
+## Example Images
+<p align="center">
+  <img src="img/login.png"/>
+  <img src="img/adminpage.png"/>
+  <img src="img/adminFunctions.png"/>
+  <img src="img/regularpage.png"/>
+</p>
+
+
