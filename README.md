@@ -86,15 +86,15 @@ Line 7: "from" phone number must be set <br />
 Note: All of the Ajax requests in both user pages are done through processUser.php
 
 ## Example Images
-<p align="center">
-###General Homepage
-  <img src="img/login.png"/>
-###Admin Homepage
-  <img src="img/adminpage.png"/>
-###Admin Ticket View and Functions
-  <img src="img/adminFunctions.png"/>
-####Customer Homepage
-  <img src="img/regularpage.png"/>
-</p>
+
+###General Homepage <br />
+<img src="img/login.png" align="center"/>
+###Admin Homepage <br />
+  <img src="img/adminpage.png" align="center"/>
+###Admin Ticket View and Functions <br />
+  <img src="img/adminFunctions.png" align="center"/>
+####Customer Homepage <br />
+  <img src="img/regularpage.png" align="center"/>
+
 
 
